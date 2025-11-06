@@ -27,12 +27,12 @@ header h1 {
   padding: 1rem;
 }
 
-header h1 span {
+.student-name {
   color: #ffd700; 
-  font-family: "Georgia", "Times New Roman", serif; /* elegant contrast font */
+  font-family: "Georgia", serif;
   font-style: italic;
-  font-weight: 600;
 }
+
 
 header nav {
   background-color: #112232;
