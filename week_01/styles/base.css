@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* === HEADER & NAVIGATION ===*/
+header {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 1rem 0 0;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+  padding: 1rem;
+}
+
+header h1 span {
+  color: #ffd700; 
+  font-family: "Georgia", "Times New Roman", serif; /* elegant contrast font */
+  font-style: italic;
+  font-weight: 600;
+}
+
+
+header nav {
+  background-color: #112232;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.8rem 0;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+  background-color: #0059b3;
+}
+
+/* === MAIN LAYOUT (CARDS) === */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+/* === CARD SECTIONS === */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Section headers */
+.card h2 {
+  background-color: #004080;
+  color: white;
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+/* === ABOUT ME SECTION === */
+.about-me {
+  padding: 1rem 1.5rem 2rem;
+}
+
+/* Align paragraph and image side by side */
+.about-me .text {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.about-me .text p {
+  flex: 2;
+  margin-top: 0.3rem;
+}
+
+.about-me .text img {
+  width: 180px;
+  height: auto;
+  border-radius: 6px; /* rectangular passport-like shape */
+  flex-shrink: 0;
+  margin-top: 0.3rem
+}
+
+/* Nigeria subsection */
+.about-me h3 {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+  font-size: 1.3rem;
+  color: #003366;
+}
+
+.about-me h3::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 0.3rem auto 0;
+}
+
+.flag-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.flag-info img {
+  width: 120px;
+  height: auto;
+  align-self: center;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.flag-info figcaption {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #555;
+  text-align: center;
+  margin-top: 0.3rem;
+}
+
+.flag-info figure {
+  margin: 0;
+  text-align: center;
+}
+
+.flag-info p {
+  flex: 0.6;
+  line-height: 1.6;
+}
+
+.flag-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flag-container .caption {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #555;
+  margin-top: 0.3rem;
+  text-align: center;
+}
+
+
+/* === WEB RESOURCES SECTION === */
+.web-resources {
+  padding: 1rem 1.5rem 2rem;
+}
+
+.web-resources h2 {
+  margin-bottom: 1rem; /* adds space below header */
+}
+
+.web-resources ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.web-resources li {
+  margin: 0.5rem 0;
+}
+
+.web-resources a {
+  color: #004080;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.web-resources a:hover {
+  text-decoration: underline;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  background-color: #004080;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 700px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .about-me .text {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-me .text img {
+    margin-top: 1rem;
+  }
+
+  .flag-info {
+    flex-direction: column;
+    text-align: center;
+  }
+}
