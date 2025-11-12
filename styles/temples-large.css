@@ -1,3 +1,5 @@
+/* temples-large.css - Large Screen Enhancements */
+
 @media screen and (min-width: 640px) {
 
   /* ---------- PAGE CONTAINER ---------- */
@@ -10,32 +12,40 @@
   header {
     background-color: var(--primary-color);
     padding: 1rem 0;
-    width: 100%; 
+    width: 100%;
   }
 
   .header-inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
     padding: 0 1rem;
   }
 
-  #menu { display: none; }
+  /* Hide hamburger button on large screens */
+  #menu {
+    display: none;
+  }
 
+  /* Make nav flex for horizontal menu */
   nav {
-    display: block;
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
   }
 
   .navigation {
     display: flex !important;
     flex-direction: row;
-    justify-content: flex-end;
     gap: 1rem;
     background-color: transparent;
     width: auto;
+    margin: 0;
   }
 
-  .navigation li { border: none; }
+  .navigation li {
+    border: none;
+  }
 
   .navigation a {
     display: block;
@@ -51,7 +61,7 @@
 
   /* ---------- MAIN ---------- */
   main {
-    width: 100%; 
+    width: 100%;
     margin: 0 auto;
     padding: 2rem 1rem;
     text-align: center;
@@ -78,7 +88,7 @@
   footer {
     background-color: var(--primary-color);
     padding: 1.5rem 0;
-    width: 100%; 
+    width: 100%;
   }
 
   footer p {
