@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+  --primary: #cfa21f;
+  --light-bg: #e6f7e8;
+  --card-bg: rgba(255, 255, 255, 0.55);
+  --text-dark: #111;
+  --radius: 10px;
+  --spacing: 1rem;
+  --shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-family: 'Roboto', helvetica, sans-serif;
+}
+
+body {
+  background: var(--light-bg);
+  color: var(--text-dark);
+}
+
+header {
+  background: var(--primary);
+  text-align: center;
+  padding: 1.5rem;
+}
+header h1 { font-size: 3rem; }
+
+/* Main Layout */
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.info-box {
+  background: var(--card-bg);
+  backdrop-filter: blur(6px);
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  margin: 1rem auto;
+  text-align: left;
+  width: 90%;
+}
+
+/* Headings inside cards */
+.info-box h2 {
+  background: #00723a;
+  color: white;
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+/* Desktop positioning overlay */
+@media (min-width: 768px) {
+  .info-box {
+    position: absolute;
+    width: 300px;
+  }
+
+  .data-box {
+    top: 40px;
+    left: 40px;
+  }
+
+  .weather-box {
+    bottom: 40px;
+    right: 60px;
+  }
+}
+
+/* Weather icon pseudo-element (desktop only) */
+@media (min-width: 768px) {
+  .weather-box h2::after {
+    content: "⛅";
+    margin-left: 6px;
+  }
+}
+
+footer {
+  background: var(--primary);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* Default SVG size (desktop and larger screens) */
+.weather-box svg {
+  position: relative;  
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.5rem;
+  color: var(--accent, #FF6B3D); 
+}
+
+/* Mobile View - shrink the icon */
+@media (max-width: 600px) {
+  .weather-box svg {
+    position: relative;
+    display: flex;
+    width: 40px;
+    height: 40px;
+  }
+}

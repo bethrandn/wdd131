@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>San Francisco, USA</title>
+  <link rel="stylesheet" href="styles/place.css">
+  <script defer src="scripts/place.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>San Francisco, USA</h1>
+  </header>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source media="(min-width: 1000px)" srcset="images/hero-large.webp">
+        <source media="(min-width: 500px)" srcset="images/hero-medium.webp">
+        <img src="images/hero-small.webp" alt="Golden Gate Bridge in San Francisco"  width="500" height="250">
+      </picture>
+
+      <div class="info-box data-box">
+        <h2>Data</h2>
+        <p><strong>Area:</strong> 121 sq km</p>
+        <p><strong>Population:</strong> 815,000</p>
+        <p><strong>State:</strong> California</p>
+        <p><strong>Languages:</strong> English</p>
+        <p><strong>Currency:</strong> USD ($)</p>
+        <p><strong>Time Zone:</strong> UTC-8 / UTC-7 (DST)</p>
+        <p><strong>Calling Code:</strong> +1</p>
+        <p><strong>Internet TLD:</strong> .us</p>
+      </div>
+
+      <div class="info-box weather-box">
+        <h2>Weather </h2>
+        <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M256 48v48M256 416v48M403.08 108.92l-33.94 33.94M142.86 369.14l-33.94 33.94M464 256h-48M96 256H48M403.08 403.08l-33.94-33.94M142.86 142.86l-33.94-33.94"/><circle cx="256" cy="256" r="80" fill="#ffd700" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="4" stroke-width="8"/></svg>
+        <p><strong>Temperature:</strong> <span id="temp">60</span>°F</p>
+        <p><strong>Conditions:</strong> Sunny</p>
+        <p><strong>Wind:</strong> <span id="wind">2</span> mph</p>
+        <p><strong>Wind Chill:</strong> <span id="windChill">N/A</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="current-year"></span> ✨Bethrand Nwankwo✨San Francisco, USA.</p>
+    <p>Last Modified: <span id="last-modified"></span></p>
+  </footer>
+
+</body>
+</html>
