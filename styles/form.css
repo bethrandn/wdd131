@@ -11,8 +11,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;    
-  min-height: 100vh;          
-  padding: 20px
+  min-height: 100vh;            
+  padding: 20px;
 }
 
 h1 {
@@ -65,8 +65,8 @@ textarea {
 
 input[type="submit"] {
   background: #e0e0e0;
-  color: #481f4a;;
-  border: 1px solid #aaa;;
+  color: #481f4a; 
+  border: 1px solid #aaa;
   cursor: pointer;
   font-size: 1em;
   padding: 12px 20px;
@@ -76,7 +76,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background: #d0d0d0; 
+  background: #d0d0d0; 
 }
 
 fieldset {
@@ -115,21 +115,15 @@ fieldset:not(.rating) label {
 }
 
 .rating legend {
-    width: 100%;
-    margin-bottom: 10px;
-    text-align: left;
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: left;
 }
 
-.rating label, 
-.rating input[type="radio"] {
-  display: flex; 
-  flex-direction: column; 
-  align-items: center; 
-  justify-content: center;
-  width: auto; 
-  height: auto;
-  padding: 0;
-  margin: 0;
+.rating-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .rating input[type="radio"] {
@@ -145,11 +139,6 @@ fieldset:not(.rating) label {
   cursor: pointer;
   line-height: 1;
   margin: 0 auto;
-}
-
-.rating input:checked + label {
-  color: #481f4a;
-  font-weight: bold;
 }
 
 .rating label:hover {
@@ -172,11 +161,11 @@ footer {
 }
 
 @media (max-width: 600px) {
-    .container, h1, footer {
-  width: 100%;
-  max-width: 100%;
- }
-    form {
-        grid-template-columns: 1fr;
-    }
+  .container, h1, footer {
+    width: 100%;
+    max-width: 100%;
+  }
+  form {
+    grid-template-columns: 1fr;
+  }
 }
