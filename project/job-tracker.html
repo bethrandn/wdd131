@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Tracker | SkillBridge</title>
+
+  <link rel="stylesheet" href="styles/job-tracker.css">
+  <script src="scripts/job-tracker.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<script>
+  const currentPage = window.location.pathname.split("/").pop();
+  document.querySelectorAll(".navigation a").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+<header>
+  <div class="header-inner">
+    <h1>SkillBridge</h1>
+
+    <button id="menu"></button>
+
+    <nav>
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="job-tracker.html">Job Tracker</a></li>
+        <li><a href="siteplan.html">Site Plan</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<main>
+  <h2>Add New Job</h2>
+
+  <form id="jobForm" class="job-form">
+    <input type="text" id="company" placeholder="Company Name" required>
+    <input type="text" id="position" placeholder="Position Title" required>
+
+    <select id="status">
+      <option value="Applied">Applied</option>
+      <option value="Interview">Interview</option>
+      <option value="Offer">Offer</option>
+      <option value="Rejected">Rejected</option>
+    </select>
+
+    <input type="date" id="date" required>
+
+    <button type="submit">Add Job</button>
+  </form>
+
+
+  <h2>My Applications</h2>
+
+  <table id="jobTable">
+    <thead>
+      <tr>
+        <th>Company</th>
+        <th>Position</th>
+        <th>Status</th>
+        <th>Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody id="jobBody">
+      <!-- rows will be added with JS -->
+    </tbody>
+  </table>
+</main>
+
+
+<footer>
+  <p>©<span id="currentyear"></span> SkillBridge | Bethrand Nwankwo</p>
+  <p id="lastModified"></p>
+</footer>
+
+</body>
+</html>

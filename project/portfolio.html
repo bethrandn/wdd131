@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | SkillBridge</title>
+
+  <link rel="stylesheet" href="styles/skill-bridge.css">
+  <link rel="stylesheet" href="styles/portfolio.css">
+  <script src="scripts/portfolio.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<script>
+  const currentPage = window.location.pathname.split("/").pop();
+  document.querySelectorAll(".navigation a").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+
+<header>
+  <div class="header-inner">
+    <h1>SkillBridge</h1>
+
+    <button id="menu"></button>
+
+    <nav>
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="job-tracker.html">Job Tracker</a></li>
+        <li><a href="siteplan.html">Site Plan</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="portfolio-container" role="main">
+  <h2>My Projects</h2>
+  <p class="subtitle">A collection of my personal, school, and practice projects.</p>
+
+  <!-- FILTER BAR (we'll enable functionality next step) -->
+  <div class="filter-bar" aria-hidden="false">
+    <input id="searchBox" type="search" placeholder="Search projects..." aria-label="Search projects">
+    <div class="filter-buttons" role="toolbar" aria-label="Filter projects">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="JavaScript">JavaScript</button>
+      <button class="filter-btn" data-filter="Web">Web</button>
+      <button class="filter-btn" data-filter="Python">Python</button>
+      <button class="filter-btn" data-filter="API">API</button>
+    </div>
+  </div>
+
+  <section class="projects-grid" aria-live="polite">
+
+    <!-- 1 -->
+    <div class="project-card" data-project="1" data-categories="JavaScript,API">
+      <img src="images/project1.jpg" alt="Weather App preview">
+      <h3>Weather App</h3>
+      <p>A simple weather forecast app using OpenWeather API and responsive UI.</p>
+      <div class="tags">
+        <span class="tag">JavaScript</span>
+        <span class="tag">API</span>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="project-card" data-project="2" data-categories="HTML,CSS,JavaScript">
+      <img src="images/project2.jpg" alt="Temple Gallery preview">
+      <h3>Temple Gallery</h3>
+      <p>A responsive gallery that dynamically builds temple cards from an array.</p>
+      <div class="tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="project-card" data-project="3" data-categories="JavaScript,LocalStorage">
+      <img src="images/project3.jpg" alt="To-Do List preview">
+      <h3>To-Do List</h3>
+      <p>A small productivity app that stores tasks in localStorage with CRUD actions.</p>
+      <div class="tags">
+        <span class="tag">JavaScript</span>
+        <span class="tag">LocalStorage</span>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="project-card" data-project="4" data-categories="Python,Web">
+      <img src="images/project4.jpg" alt="Blog Backend preview">
+      <h3>Mini Blog (Flask)</h3>
+      <p>A tiny blog prototype using Flask for the backend and templates for views.</p>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">Web</span>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="project-card" data-project="5" data-categories="Web,Design">
+      <img src="images/project5.jpg" alt="Landing Page preview">
+      <h3>Marketing Landing</h3>
+      <p>A responsive marketing landing page with form validation and CTA.</p>
+      <div class="tags">
+        <span class="tag">Web</span>
+        <span class="tag">Design</span>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="project-card" data-project="6" data-categories="JavaScript,Canvas">
+      <img src="images/project6.jpg" alt="Canvas Game preview">
+      <h3>Canvas Game</h3>
+      <p>A small browser game built with the Canvas API — input, collisions, scoring.</p>
+      <div class="tags">
+        <span class="tag">JavaScript</span>
+        <span class="tag">Canvas</span>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="project-card" data-project="7" data-categories="API,JavaScript">
+      <img src="images/project7.jpg" alt="Movie Search preview">
+      <h3>Movie Search</h3>
+      <p>Search movies using a public API and display results with pagination.</p>
+      <div class="tags">
+        <span class="tag">API</span>
+        <span class="tag">JavaScript</span>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="project-card" data-project="8" data-categories="Python,Data">
+      <img src="images/project8.jpg" alt="Data Analysis preview">
+      <h3>Data Visualizer</h3>
+      <p>A script that parses CSV data and shows charts (Python + Charting).</p>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">Data</span>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="project-card" data-project="9" data-categories="HTML,CSS">
+      <img src="images/project9.jpg" alt="Responsive Grid preview">
+      <h3>Responsive Grid Demo</h3>
+      <p>CSS grid demos and patterns for responsive layouts and cards.</p>
+      <div class="tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+<!-- MODAL (PROJECT DETAILS POPUP) -->
+<div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-content">
+    <button class="close" aria-label="Close dialog">&times;</button>
+
+    <img id="modalImage" src="" alt="">
+    <h3 id="modalTitle"></h3>
+    <p id="modalDescription"></p>
+
+    <h4>Technologies Used:</h4>
+    <ul id="modalTechList"></ul>
+
+    <a id="modalLink" href="#" target="_blank" class="view-project-btn" rel="noopener">View Project</a>
+  </div>
+</div>
+
+<footer>
+  <p>© <span id="currentyear"></span> SkillBridge | Bethrand Nwankwo  Nigeria</p>
+  <p id="lastModified"></p>
+</footer>
+
+</body>
+</html>

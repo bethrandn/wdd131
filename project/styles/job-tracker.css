@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  background: #f4f7fa;
+  padding-bottom: 3rem;
+}
+
+header {
+  background: #003366;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 .5rem;
+  font-size: 0.9rem;
+}
+
+nav a.active {
+  text-decoration: underline;
+}
+
+main {
+  width: 95%;
+  max-width: 900px;
+  margin: 1.5rem auto;
+}
+
+h2 {
+  margin: 1.2rem 0 .5rem;
+  color: #003366;
+}
+
+.job-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .8rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.job-form input,
+.job-form select,
+.job-form button {
+  padding: .7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.job-form button {
+  background: #0066cc;
+  color: white;
+  cursor: pointer;
+  grid-column: span 2;
+  font-weight: bold;
+}
+
+.job-form button:hover {
+  background: #004e99;
+}
+
+table {
+  width: 100%;
+  margin-top: 1rem;
+  background: white;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+th {
+  background: #003366;
+  color: white;
+}
+
+.action-btn {
+  padding: .4rem .7rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit {
+  background: #ffc107;
+}
+
+.delete {
+  background: #dc3545;
+  color: white;
+}
+
+footer {
+  margin-top: 3rem;
+  padding: 1rem;
+  background: #003366;
+  color: white;
+  text-align: center;
+}
