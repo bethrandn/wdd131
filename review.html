@@ -5,12 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Review Confirmation</title>
   <link rel="stylesheet" href="styles/form.css">
-  <script src="scripts/form.js" defer></script>
 </head>
 <body>
-  <h1>Thank you for your review!</h1>
-  <p>Your submission has been recorded.</p>
-  <p id="counter"></p>
+  <header>
+    <div class="container">
+      <h1>Thank you for your review!</h1>
+      <p>Your submission has been recorded.</p>
+      <p id="counter"></p>
+    </div>
+  </header>
 
   <footer>
     <p>©<span id="currentyear"></span> ✨ Bethrand Nwankwo ✨ Nigeria</p>
@@ -18,12 +21,22 @@
   </footer>
 
   <script>
-    // Counter using localStorage
+   
+    
+    // Update Current Year
+    document.querySelector("#currentyear").textContent = new Date().getFullYear();
+
+    // Update Last Modified Date
+    const lastModifiedDate = new Date(document.lastModified);
+    const options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+    document.querySelector("#lastModified").textContent = 
+        `Last Modified: ${lastModifiedDate.toLocaleDateString('en-US', options)}`;
+    -
     let count = localStorage.getItem("reviewCount") || 0;
-    count++;
+    count = Number(count) + 1; 
     localStorage.setItem("reviewCount", count);
     document.getElementById("counter").textContent = 
-      "You have submitted " + count + " review(s).";
+        "You have submitted " + count + " review(s).";
   </script>
 </body>
 </html>
