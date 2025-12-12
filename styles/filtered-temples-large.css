@@ -1,0 +1,111 @@
+/* temples-large.css - Large Screen Enhancements */
+
+@media screen and (min-width: 640px) {
+
+  /* ---------- PAGE CONTAINER ---------- */
+  .page-container {
+    max-width: 1000px; 
+    margin: 0 auto;
+  }
+
+  /* ---------- HEADER ---------- */
+  header {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    width: 100%;
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  /* Hide hamburger button on large screens */
+  #menu {
+    display: none;
+  }
+
+  /* Make nav flex for horizontal menu */
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+  }
+
+  .navigation {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+    background-color: transparent;
+    width: auto;
+    margin: 0;
+  }
+
+  .navigation li {
+    border: none;
+  }
+
+  .navigation a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+  }
+
+  .navigation a:hover,
+  .navigation a.active {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+  }
+
+  /* ---------- MAIN ---------- */
+  main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  figure {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  figure:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    background-color: var(--primary-color);
+    padding: 1.5rem 0;
+    width: 100%;
+  }
+
+  footer p {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;   
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+@media (min-width: 900px) {
+    .gallery img {
+        height: 220px;
+    }
+}
