@@ -1,3 +1,8 @@
+// ===================================
+// Portfolio Modal + Search + Filters
+// Author: Bethrand Nwankwo
+// ===================================
+
 // Portfolio modal data for 9 projects
 const projects = {
   1: {
@@ -87,7 +92,6 @@ document.querySelectorAll(".project-card").forEach(card => {
     modalTitle.textContent = p.title;
     modalDesc.textContent = p.description;
 
-    // fill tech list
     modalTech.innerHTML = "";
     p.tech.forEach(t => {
       const li = document.createElement("li");
@@ -97,12 +101,11 @@ document.querySelectorAll(".project-card").forEach(card => {
 
     modalLink.href = p.link;
 
-    // show modal
     modal.setAttribute("aria-hidden", "false");
   });
 });
 
-// Close handlers
+// Close modal
 closeBtn.addEventListener("click", () => {
   modal.setAttribute("aria-hidden", "true");
 });
@@ -111,42 +114,37 @@ modal.addEventListener("click", (e) => {
   if (e.target === modal) modal.setAttribute("aria-hidden", "true");
 });
 
-// Basic search and filter (will be enhanced next step)
+// Search + Filter
 const searchBox = document.getElementById("searchBox");
 const filterButtons = document.querySelectorAll(".filter-btn");
 const projectCards = document.querySelectorAll(".project-card");
 
 searchBox.addEventListener("input", () => {
   const q = searchBox.value.trim().toLowerCase();
+
   projectCards.forEach(card => {
     const title = card.querySelector("h3").textContent.toLowerCase();
     const desc = card.querySelector("p").textContent.toLowerCase();
-    if (title.includes(q) || desc.includes(q)) {
-      card.style.display = "";
-    } else {
-      card.style.display = "none";
-    }
+
+    card.style.display = (title.includes(q) || desc.includes(q)) ? "" : "none";
   });
 });
 
-// Filter button base behavior (simple client-side)
+// Filter buttons
 filterButtons.forEach(btn => {
   btn.addEventListener("click", () => {
     filterButtons.forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
 
-    const filter = btn.dataset.filter; // e.g. "JavaScript" or "all"
-    if (filter === "all") {
-      projectCards.forEach(c => c.style.display = "");
-      return;
-    }
+    const filter = btn.dataset.filter;
 
-    projectCards.forEach(c => {
-      const cats = c.dataset.categories.toLowerCase();
-      if (cats.includes(filter.toLowerCase())) {
-        c.style.display = "";
+    projectCards.forEach(card => {
+      const cats = card.dataset.categories.toLowerCase();
+
+      if (filter === "all" || cats.includes(filter.toLowerCase())) {
+        card.style.display = "";
       } else {
-        c.style.display = "none";
+        card.style.display = "none";
       }
     });
   });

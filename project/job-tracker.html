@@ -1,90 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" >
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Job Tracker | SkillBridge</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillBridge | Job Tracker</title>
 
-  <link rel="stylesheet" href="styles/job-tracker.css">
-  <script src="scripts/job-tracker.js" defer></script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="styles/skill-bridge.css" />
+  <script src="scripts/skill-bridge.js" defer></script>
 </head>
 
 <body>
-<script>
-  const currentPage = window.location.pathname.split("/").pop();
-  document.querySelectorAll(".navigation a").forEach(link => {
-    if (link.getAttribute("href") === currentPage) {
-      link.classList.add("active");
-    }
-  });
-</script>
 
 <header>
   <div class="header-inner">
     <h1>SkillBridge</h1>
 
-    <button id="menu"></button>
+    <button id="menu" aria-label="Toggle navigation">
+      <span></span>
+    </button>
 
     <nav>
       <ul class="navigation">
         <li><a href="index.html">Home</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="job-tracker.html">Job Tracker</a></li>
-        <li><a href="siteplan.html">Site Plan</a></li>
+        <li><a href="job-tracker.html" class="active">Job Tracker</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="signup.html">Sign up</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-
 <main>
-  <h2>Add New Job</h2>
 
-  <form id="jobForm" class="job-form">
-    <input type="text" id="company" placeholder="Company Name" required>
-    <input type="text" id="position" placeholder="Position Title" required>
+  <section class="page-header">
+    <h2>Job Tracker</h2>
+    <p>
+      A simple example of how you can track job applications and keep your search organized.
+      In the future, this can become a personalized dashboard for each user.
+    </p>
+  </section>
 
-    <select id="status">
-      <option value="Applied">Applied</option>
-      <option value="Interview">Interview</option>
-      <option value="Offer">Offer</option>
-      <option value="Rejected">Rejected</option>
-    </select>
+  <section class="card-grid">
 
-    <input type="date" id="date" required>
+    <article class="card">
+      <h3>Junior Frontend Developer</h3>
+      <p><strong>Company:</strong> Example Tech</p>
+      <p><strong>Status:</strong> Applied</p>
+      <p><strong>Notes:</strong> Submitted via company website, waiting for response.</p>
+    </article>
 
-    <button type="submit">Add Job</button>
-  </form>
+    <article class="card">
+      <h3>Frontend Internship</h3>
+      <p><strong>Company:</strong> Startup Labs</p>
+      <p><strong>Status:</strong> Interview Scheduled</p>
+      <p><strong>Notes:</strong> First interview completed, technical round next week.</p>
+    </article>
 
+    <article class="card">
+      <h3>Junior Web Developer</h3>
+      <p><strong>Company:</strong> Creative Devs</p>
+      <p><strong>Status:</strong> Offer</p>
+      <p><strong>Notes:</strong> Offer received, reviewing details.</p>
+    </article>
 
-  <h2>My Applications</h2>
+  </section>
 
-  <table id="jobTable">
-    <thead>
-      <tr>
-        <th>Company</th>
-        <th>Position</th>
-        <th>Status</th>
-        <th>Date</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
+  <section class="dashboard-summary">
+    <h2>How this evolves</h2>
+    <p>
+      As SkillBridge grows, each user could create an account, log in, and see their own job tracker dashboard,
+      powered by a real database and authentication.
+    </p>
+    <p>
+      For now, this page demonstrates the structure and layout of a simple job tracking system.
+    </p>
+  </section>
 
-    <tbody id="jobBody">
-      <!-- rows will be added with JS -->
-    </tbody>
-  </table>
 </main>
 
-
 <footer>
-  <p>©<span id="currentyear"></span> SkillBridge | Bethrand Nwankwo</p>
+  <div class="footer-icons">
+    <a href="https://github.com/bethrandn" target="_blank" aria-label="GitHub">
+      <svg viewBox="0 0 24 24">
+        <path d="M9 19c-4.5 1.5-4.5-2.5-6-3m12 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 18 4.77 5.07 5.07 0 0 0 17.91 1S16.73.65 14 2.48a13.38 13.38 0 0 0-5 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77 5.44 5.44 0 0 0 3.5 8.52c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 19v3" />
+      </svg>
+    </a>
+
+    <a href="https://www.linkedin.com/in/bethrand-nwankwo-013076126" target="_blank" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24">
+        <rect x="2" y="9" width="4" height="12"></rect>
+        <circle cx="4" cy="4" r="2"></circle>
+        <path d="M10 9h4v2.5a3.5 3.5 0 1 1 7 0V21h-4v-8.5a1.5 1.5 0 1 0-3 0V21h-4z"></path>
+      </svg>
+    </a>
+  </div>
+
+  <div id="themeToggle" class="theme-toggle"></div>
+
+  <p>© <span id="currentyear"></span> SkillBridge | Built by Bethrand Nwankwo</p>
   <p id="lastModified"></p>
 </footer>
+
+<div id="backToTop">↑</div>
 
 </body>
 </html>

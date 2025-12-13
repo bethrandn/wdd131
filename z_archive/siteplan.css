@@ -1,0 +1,93 @@
+/* =======================================
+   Site Plan Page Styles
+   ======================================= */
+
+body {
+  background: var(--accent);
+}
+
+/* Header */
+.siteplan-header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.siteplan-header h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Sections */
+.plan-section {
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  background: var(--light);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.plan-section h3 {
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+}
+
+/* Color Palette */
+.color-palette {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.color-box {
+  flex: 1;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+  color: var(--light);
+}
+
+/* Sitemap */
+.sitemap {
+  list-style: none;
+  padding-left: 0;
+}
+
+.sitemap li {
+  background: var(--accent);
+  padding: 0.6rem;
+  margin-bottom: 0.4rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+/* Wireframes */
+.wireframes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.wireframe-box {
+  background: var(--light);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.wireframe-box img {
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .color-palette {
+    flex-direction: column;
+  }
+}

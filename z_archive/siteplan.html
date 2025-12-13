@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Site plan for the SkillBridge project." />
+  <meta name="author" content="Bethrand Nwankwo" />
+  <title>Site Plan | SkillBridge</title>
+
+  <link rel="stylesheet" href="styles/skill-bridge.css" />
+  <link rel="stylesheet" href="styles/siteplan.css" />
+  <script src="scripts/skill-bridge.js" defer></script>
+  <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+      <h1>SkillBridge</h1>
+
+      <button id="menu" aria-label="Toggle navigation">
+        <span></span>
+      </button>
+
+      <nav>
+        <ul class="navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="job-tracker.html">Job Tracker</a></li>
+          <li><a href="siteplan.html" class="active">Site Plan</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="siteplan-header">
+      <h2>SkillBridge Site Plan</h2>
+      <p>A simple overview of the structure, purpose, and design choices behind this project.</p>
+    </section>
+
+    <!-- BRANDING -->
+    <section class="plan-section">
+      <h3>Branding</h3>
+      <p><strong>Site Name:</strong> SkillBridge</p>
+      <p><strong>Purpose:</strong> Help new developers organize job applications and showcase projects.</p>
+
+      <div class="color-palette">
+        <div class="color-box" style="background:#0a1a3d;">#0a1a3d</div>
+        <div class="color-box" style="background:#ffb86b; color:#000;">#ffb86b</div>
+        <div class="color-box" style="background:#e4f0ff; color:#000;">#e4f0ff</div>
+        <div class="color-box" style="background:#ffffff; color:#000;">#ffffff</div>
+      </div>
+    </section>
+
+    <!-- TARGET AUDIENCE -->
+    <section class="plan-section">
+      <h3>Target Audience</h3>
+      <p>Students, junior developers, and anyone learning web development who needs a simple way to track progress and showcase work.</p>
+    </section>
+
+    <!-- SITE MAP -->
+    <section class="plan-section">
+      <h3>Site Map</h3>
+      <ul class="sitemap">
+        <li>Home</li>
+        <li>Portfolio</li>
+        <li>Job Tracker</li>
+        <li>Site Plan</li>
+      </ul>
+    </section>
+
+    <!-- WIREFRAMES -->
+    <section class="plan-section">
+      <h3>Wireframes</h3>
+      <p>Basic layout sketches for each page:</p>
+
+      <div class="wireframes">
+        <div class="wireframe-box">
+          <h4>Home Page</h4>
+          <img src="images/wireframe-home.png" alt="Home page wireframe" />
+        </div>
+
+        <div class="wireframe-box">
+          <h4>Portfolio Page</h4>
+          <img src="images/wireframe-portfolio.png" alt="Portfolio page wireframe" />
+        </div>
+
+        <div class="wireframe-box">
+          <h4>Job Tracker Page</h4>
+          <img src="images/wireframe-jobtracker.png" alt="Job tracker wireframe" />
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+  <!-- Social Icons -->
+  <div class="footer-icons">
+    <!-- GitHub -->
+    <a href="https://github.com/bethrandn" target="_blank" aria-label="GitHub">
+      <svg viewBox="0 0 24 24">
+        <path d="M9 19c-4.5 1.5-4.5-2.5-6-3m12 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 18 4.77 5.07 5.07 0 0 0 17.91 1S16.73.65 14 2.48a13.38 13.38 0 0 0-5 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77 5.44 5.44 0 0 0 3.5 8.52c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 19v3" />
+      </svg>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/bethrand-nwankwo-013076126" target="_blank" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24">
+        <rect x="2" y="9" width="4" height="12"></rect>
+        <circle cx="4" cy="4" r="2"></circle>
+        <path d="M10 9h4v2.5a3.5 3.5 0 1 1 7 0V21h-4v-8.5a1.5 1.5 0 1 0-3 0V21h-4z"></path>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Dark Mode Toggle -->
+  <div id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+    <!-- JS will insert the correct SVG (moon or sun) -->
+  </div>
+
+  <!-- Footer Text -->
+  <p>© <span id="currentyear"></span> SkillBridge | Built by Bethrand Nwankwo</p>
+  <p id="lastModified"></p>
+</footer>
+
+<!-- Back to Top Button -->
+<div id="backToTop">↑</div>
+
+</body>
+</html>

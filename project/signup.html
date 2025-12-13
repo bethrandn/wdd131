@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SkillBridge | Portfolio</title>
+  <title>SkillBridge | Sign up</title>
 
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="styles/skill-bridge.css" />
@@ -23,12 +23,12 @@
     <nav>
       <ul class="navigation">
         <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="job-tracker.html">Job Tracker</a></li>
         <li><a href="resources.html">Resources</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Sign up</a></li>
+        <li><a href="signup.html" class="active">Sign up</a></li>
       </ul>
     </nav>
   </div>
@@ -37,43 +37,39 @@
 <main>
 
   <section class="page-header">
-    <h2>Portfolio</h2>
-    <p>A selection of projects that reflect my skills and growth as a developer.</p>
+    <h2>Create an account</h2>
+    <p>Join SkillBridge and start tracking your job search progress in a simple, friendly space.</p>
   </section>
 
-  <section class="card-grid">
+  <section class="auth-section">
+    <form class="auth-form">
+      <div class="auth-field">
+        <label for="signupName">Full name</label>
+        <input type="text" id="signupName" placeholder="Your name" required />
+      </div>
 
-    <article class="card">
-      <h3>SkillBridge Job Tracker</h3>
-      <p>
-        A simple concept for tracking job applications and progress over time, aimed at helping young developers stay organized.
+      <div class="auth-field">
+        <label for="signupEmail">Email</label>
+        <input type="email" id="signupEmail" placeholder="you@example.com" required />
+      </div>
+
+      <div class="auth-field">
+        <label for="signupPassword">Password</label>
+        <input type="password" id="signupPassword" placeholder="Create a password" required />
+      </div>
+
+      <div class="auth-field">
+        <label for="signupConfirm">Confirm password</label>
+        <input type="password" id="signupConfirm" placeholder="Repeat your password" required />
+      </div>
+
+      <button type="submit" class="auth-button">Sign up</button>
+
+      <p class="auth-switch">
+        Already have an account?
+        <a href="login.html">Login</a>
       </p>
-      <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
-    </article>
-
-    <article class="card">
-      <h3>Responsive Portfolio Site</h3>
-      <p>
-        A clean, responsive portfolio layout showcasing projects, contact information, and a simple navigation experience.
-      </p>
-      <p><strong>Tech Stack:</strong> HTML, CSS</p>
-    </article>
-
-    <article class="card">
-      <h3>Learning Projects</h3>
-      <p>
-        Smaller exercises and experiments focused on layout, forms, and component design to build confidence and skill.
-      </p>
-      <p><strong>Tech Stack:</strong> HTML, CSS, basic JavaScript</p>
-    </article>
-
-  </section>
-
-  <section class="resume-section">
-    <h2>Resume</h2>
-    <p>You can download a copy of my resume for more details on my experience and skills.</p>
-
-    <a class="resume-download" href="#" download>Download Resume (Coming Soon)</a>
+    </form>
   </section>
 
 </main>
